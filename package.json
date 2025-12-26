@@ -7,11 +7,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "prebuild": "rm -rf ./2018/*",
-    "build": "parcel build --public-url '/2018' --dist-dir 2018 --detailed-report -- ./src/index.html ",
+    "build": "./scripts/build.sh",
     "start": "parcel ./src/index.html",
-    "test": "cat ./2018/index.html | grep -q '\"snow_1'",
-    "deploy": "git submodule update --init --recursive --remote -- 2019 2021 2022 2023 2024 2025 && pnpm build && vercel"
+    "test": "cat ./2018/index.html | grep -q '\"snow_1'"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.10.3",
